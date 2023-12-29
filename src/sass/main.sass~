@@ -1,0 +1,355 @@
+@import "animate"
+
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap')
+
+*
+  margin: 0
+  padding: 0
+
+body, div, a
+  display: flex
+  flex-direction: column
+
+/* colors
+$BG10: #3A0707
+$BG20: #4E1E1E
+$Purple50: #9C40E3
+$FG80: #C39595
+$FG90: #FAD5D5
+
+.row
+  flex-direction: row
+
+h1, h2
+  color: $FG90
+  font-size: 4rem
+  font-family: Righteous
+
+h2
+  font-size: 3rem
+  
+a
+  color: $Purple50
+  
+body
+  background: $BG10
+  font-family: 'Atkinson Hyperlegible'
+  color: $FG80
+  font-size: 1.3rem
+  overflow-x: hidden
+
+.hero
+  flex-direction: column
+  height: 100vh
+  align-items: center
+
+.center-text
+  justify-content: space-between
+  margin: 10vh 0 9vh 0
+  font-size: 1.3rem
+  width: 80vw
+  height: 100%
+
+.back
+  flex-direction: row
+  color: $FG80
+  text-decoration: none
+  & > svg
+    width: 1.5rem
+    margin-right: 0.5rem
+
+.info
+  flex-direction: row
+  justify-content: space-between
+  align-items: flex-end
+
+.info-date
+  display: table
+  & > h1
+    display: block
+  & > div
+    display: table-caption
+    
+.bottom-text
+  font-size: 2rem
+  flex-direction: row
+  font-weight: bold
+  color: $FG80
+  & > svg
+    width: 2rem
+    margin-right: 1rem
+
+.ticket-button
+  background: $FG90
+  border-radius: 0.5rem 0 0 0.5rem
+  color: $BG10
+  justify-content: space-between
+  align-items: center
+  padding-left: 2rem
+  gap: 1vw
+  position: absolute
+  right: 0
+  bottom: 0
+  transition: gap 0.5s
+  text-decoration: none
+  mask: radial-gradient(circle 1rem at top left ,#0000 98%,#000) top left, radial-gradient(circle 1rem at bottom left ,#0000 98%,#000) bottom left
+  mask-repeat: repeat, repeat
+  mask-size: auto, auto
+  mask-size: 100% 51%
+  mask-repeat: no-repeat
+  & > svg
+    height: 4rem
+    width: 9vw
+    margin-right: 0
+  &:hover
+    gap: 3vw
+  
+.title
+  color: $FG90
+  font-size: 4rem
+  align-self: center
+
+.button
+  background: transparent
+  padding: 1rem 0rem
+  text-decoration: none
+  color: $FG90
+  font-weight: bold
+  font-size: 2rem
+  flex-direction: row
+  transition: padding 0.3s
+  width: fit-content
+  &:hover
+    background: $FG90
+    color: $BG10
+    padding: 1rem 2rem
+  & > svg
+    width: 2rem
+    margin-right: 1rem
+
+.link
+  margin-top: 1rem
+    
+.illustration
+  top: 10vh
+  height: 100vh
+  position: absolute
+  z-index: -1
+
+.promo
+  margin-top: -30vh
+  z-index: -1
+  
+.marquee
+  background: $BG20
+  color: $FG90
+  flex-direction: row
+  gap: 5rem
+  padding: 5rem 0
+  align-self: center
+  & > h1
+    font-size: 5vw
+    display: ruby
+    animation: scroll-left 20s linear infinite
+
+@keyframes scroll-left
+  0%
+    transform: translateX(50%)
+  100%
+    transform: translateX(-50%)
+  
+.card
+  width: 10rem
+  border-radius: 0.5rem
+  
+.events
+  margin: 0 10vw 30rem 10vw
+  gap: 10rem
+  align-items: center
+  & video
+    width: 40vw
+    z-index: -1
+
+.pro-show
+  flex-direction: row
+  gap: 3rem
+
+.pro-show-info, .pro-show
+  justify-content: space-between
+
+.pro-show-left
+  flex-direction: row-reverse
+  
+.pro-show-info-top
+  align-items: end
+
+.pro-show-info-bottom
+  flex-direction: row
+  justify-content: space-between
+  align-items: end
+
+.time
+  flex-direction: row
+  align-items: baseline
+  
+.featured-event
+  display: flex
+  align-items: end
+  width: fit-content
+
+.featured-left-align
+  align-items: start
+  
+.featured-event-top
+  flex-direction: row
+  gap: 5rem
+
+.featured-top-left-align
+  flex-direction: row-reverse
+    
+.featured-event-info
+  align-items: end
+
+.featured-info-left-align
+  align-items: start
+    
+.featured-event-name
+  font-size: 15rem
+  font-weight: bold
+  color: $FG90
+  opacity: 0.5
+  margin-top: -10rem
+  font-family: Righteous
+
+.event
+  flex-direction: row
+  gap: 1.5rem
+  & img
+    width: 4rem
+.event-add-info
+  display: block
+  
+.gallery
+  margin: 0 13rem
+.photos
+  margin-top: 1rem
+  gap: 2rem
+  flex-direction: row
+  flex-wrap: wrap
+  & > img
+    border-radius: 1rem
+    width: 35vw
+
+.companies
+  flex-direction: row
+  margin: 10rem 2rem 0 2rem
+  gap: 2rem
+  justify-content: space-around
+  flex-wrap: wrap
+  & > img
+    height: 6rem
+  
+.name
+  font-size: 2rem
+  font-weight: bold
+
+.footer
+  background: $BG20
+  width: 86vw
+  margin-top: 2rem
+  padding: 5rem 8vw
+  flex-direction: row
+  justify-content: space-between
+  align-items: center
+  & .name
+    font-weight: bold
+    color: $FG90
+    margin-bottom: 1rem
+  & img
+    max-width: 100%
+    
+.footer-text
+  max-width: 40rem
+
+#loader
+  background: Window
+  height: 100vh
+  width: 100vw
+  z-index: 100
+  justify-content: center
+  align-items: center
+  & svg
+    width: 50vw
+    animation: pulse 1s linear infinite
+
+@keyframes pulse
+  0%
+    opacity: 0%
+  50%
+    opacity: 100%
+  100%
+    opacity: 0%
+  
+@media screen and (max-width: 700px)
+  h1
+    font-size: 2rem
+  h2
+    font-size: 1.5rem
+  .button
+    font-size: 1.5rem
+  .info
+    flex-direction: column-reverse
+    gap: 2rem
+    align-items: start
+  .bottom
+    gap: 1rem
+  .bottom-text
+    font-size: 1.5rem
+  .ticket-button > svg
+    height: 3.5rem
+  .marquee
+    padding: 3rem 0
+  .marquee > h1
+    font-size: 10vw
+  .events
+    margin: 0 0 5rem 0
+    align-items: start
+    gap: 0
+  .pro-show
+    flex-direction: column
+    margin-bottom: 2rem
+    gap: 1rem
+    & video
+      width: 100vw
+  .pro-show-info
+    margin: 0 1rem
+  .featured-event
+    flex-direction: column-reverse
+    align-items: start
+    margin-bottom: 2rem
+  .featured-event-top
+    gap: 1rem
+    flex-direction: column
+    & video
+      width: 100vw
+      align-items: start
+  .featured-event-info
+    align-items: start
+    margin-left: 1rem
+  .featured-event-name
+    font-size: 4rem
+    margin-top: 0
+    margin-bottom: -5rem
+  .event
+    gap: 1rem
+  .gallery
+    margin: 3rem 0 0 0
+  .photos > img
+    width: 80vw
+  .footer
+    flex-direction: column
+    align-items: flex-start
+    gap: 3rem
+  
+

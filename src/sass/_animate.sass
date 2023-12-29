@@ -1,0 +1,13 @@
+\:root
+  --scrollpos: 0
+
+.title > img
+  width: min(calc(50vmin + var(--scrollpos) * 5vw), 100vw)
+  top: min(calc(18vh + 2rem * var(--scrollpos)), 60vh)
+  position: absolute
+  left: 50%
+  transform: translateX(-50%)
+
+.bottom
+  opacity: calc(1 - 0.1 * var(--scrollpos))
+
